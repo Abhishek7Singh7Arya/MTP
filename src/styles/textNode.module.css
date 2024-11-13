@@ -1,0 +1,49 @@
+/* textNode.module.css */
+.textNodeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: auto;
+    min-width: 200px;
+  }
+  
+  .textNodeTextarea {
+    width: 100%;
+    min-height: 80px;
+    max-height: 300px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    resize: vertical;
+  }
+  
+  .textNodeHandle {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4caf50;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+  .handlelabel .react-flow__handle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .handlelabel .react-flow__handle::after {
+    content: attr(data-label);
+    margin-top: 5px; /* Adjust the spacing as needed */
+    font-size: 12px; /* Adjust the font size as needed */
+    color: #000; /* Adjust the color as needed */
+  }
+  

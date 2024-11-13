@@ -1,0 +1,24 @@
+/* toolbar.module.css */
+.toolbarContainer {
+    padding: 20px;
+    background-color: #2a3d47;
+    width: 100%;
+  }
+  
+  .nodeWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .nodeWrapper .draggableNode {
+    background-color: #1c2536;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+  }
+  
