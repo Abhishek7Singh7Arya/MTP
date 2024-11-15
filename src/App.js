@@ -2,13 +2,15 @@ import styles from './styles/App.module.css'
 import { PipelineToolbar } from './toolbar';
 import { PipelineUI } from './ui';
 import { SubmitButton } from './submit';
+import { useStore } from 'reactflow';
 function App() {
+  
   return (
     <div className={styles.appContainer}>
       <h1 className={styles.title}>VectorShift Workflow</h1>
       <PipelineToolbar />
       <PipelineUI />
-      <SubmitButton />
+      <SubmitButton/>
     </div>
   );
 }

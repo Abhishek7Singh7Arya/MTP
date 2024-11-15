@@ -88,7 +88,7 @@ export const TextNode = ({ id, data }) => {
             <span style={{ fontSize: "12px", color: "gray", opacity: 0.7 }}>{variable}</span>
           </div>
           <Handle
-            key={variable}
+            // key={variable}
             type="target"
             position={Position.Left}
             id={`${id}-input-${variable}`}
@@ -96,8 +96,11 @@ export const TextNode = ({ id, data }) => {
             // data-label={`${variable}`}
             style={{ top: `${50 + index * 30}%` }}
           />
+      
+
         </>
-      ))} <Handle type="target" position={Position.left} id={`${id}-output`} />
+      ))} 
+
       <Handle type="source" position={Position.Right} id={`${id}-output`} />
     </div>
   );

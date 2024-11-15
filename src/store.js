@@ -8,9 +8,10 @@ import {
     MarkerType,
   } from 'reactflow';
 
-export const useStore = create((set, get) => ({
-    nodes: [],
-    edges: [],
+  export const useStore = create((set, get) => ({
+  nodes: [],
+  edges: [],
+
     getNodeID: (type) => {
         const newIDs = {...get().nodeIDs};
         if (newIDs[type] === undefined) {
@@ -53,3 +54,5 @@ export const useStore = create((set, get) => ({
       });
     },
   }));
+
+ 
