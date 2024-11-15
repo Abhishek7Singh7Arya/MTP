@@ -1,0 +1,25 @@
+/*All nodes UI.module.css*/
+.outerBox{
+    border:2px solid #7d0f85;
+    background-color: #e7c4ef;
+    border-radius: 20px;
+
+}
+
+.labelStyle {
+    font-size: 14px;
+    color: #7d0f85;
+}
+
+.textAreaStyle{
+    border: 0.5 solid #7d0f85;
+    border-radius: 10px;
+}
+
+.handle{
+    background-color: #7d0f85;
+}
+.titleStyle{
+    font-size: 18px;
+    color: #700e79;
+}

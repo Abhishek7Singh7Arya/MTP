@@ -2,7 +2,7 @@
 
 import { Handle, Position } from 'reactflow';
 import { useState } from 'react';
-
+import style from '../styles/node.module.css';
 export const GenericNode = ({ id, title, fields = [], handles = [] }) => {
   const [fieldValues, setFieldValues] = useState(
     fields.reduce((acc, field) => ({ ...acc, [field.name]: field.defaultValue || '' }), {})
@@ -13,13 +13,13 @@ export const GenericNode = ({ id, title, fields = [], handles = [] }) => {
   };
 
   return (
-    <div style={{ width: 200 , padding: 10, border: '1px solid black' }}>
+    <div className={style.outerBox} style={{ width: 200 , padding: 10 }}>
       <div>
-        <span>{title}</span>
+        <span className={style.titleStyle}>{title}</span>
       </div>
       <div>
         {fields.map((field) => (
-          <label key={field.name}>
+          <label className={style.labelStyle} key={field.name}>
             {field.label}:
             {field.type === 'select' ? (
               <select
@@ -33,7 +33,8 @@ export const GenericNode = ({ id, title, fields = [], handles = [] }) => {
                 ))}
               </select>
             ) : (
-              <input
+              <input 
+              className ={style.textAreaStyle}
                 type="text"
                 value={fieldValues[field.name]}
                 onChange={(e) => handleFieldChange(field.name, e.target.value)}

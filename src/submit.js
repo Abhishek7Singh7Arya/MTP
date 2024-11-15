@@ -23,8 +23,7 @@ export const SubmitButton = () => {
             const data = await response.json();
 
             alert(
-                `Pipeline Analyis:\n Number of Nodes ${data.num_nodes} \n NUmber of Edges:
-                ${data.num_edges}\n Is DAG: ${data.is_dag? 'Yes':'No'}`
+                `Pipeline Analyis:\n Number of Nodes: ${data.num_nodes} \nNUmber of Edges: ${data.num_edges}\n Is DAG: ${data.is_dag? 'Yes':'No'}`
             );
         }
         catch(error){

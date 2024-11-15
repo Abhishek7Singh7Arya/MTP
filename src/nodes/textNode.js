@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react"; // Import useRef
 import { Handle, Position } from "reactflow";
 import styles from "../styles/textNode.module.css";
+import style2 from "../styles/node.module.css";
 
 export const TextNode = ({ id, data }) => {
   const [currText, setCurrText] = useState(data?.text || "{{input}}");
@@ -59,24 +60,29 @@ export const TextNode = ({ id, data }) => {
 
   return (
     <div
+      className={style2.outerBox}
       style={{
         width: dimensions.width,
         height: dimensions.height,
-        border: "1px solid black",
         padding: "10px",
         position: "relative",
+        
+
       }}
     >
+     
+      <div  >
       <div>
+        <span className={style2.titleStyle}>Text</span>
       </div>
-      <div>
-        <label>
-          Text:
+        <label className={style2.labelStyle}>
+          Text Area:
           <textarea
             ref={textareaRef} // Attach the ref to the textarea
-            className="auto-resize-textarea"
+            className= {`auto-resize-textarea ${style2.textAreaStyle}`}
             type="text"
             value={currText}
+            
             onChange={handleTextChange}
             style={{ width: "100%", "max-width": "200%", height: "100%", resize: "none", overflow: "hidden" }}
           />
@@ -95,6 +101,7 @@ export const TextNode = ({ id, data }) => {
             // className={styles.handlelabel}
             // data-label={`${variable}`}
             style={{ top: `${50 + index * 30}%` }}
+            
           />
       
 
